@@ -1,0 +1,6 @@
+# Build settings
+markdown: kramdown
+# theme: minima
+
+baseurl: /blog
+exclude: ['README.md']
