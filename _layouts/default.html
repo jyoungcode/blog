@@ -3,17 +3,23 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta charset="UTF-8">
-  <title>jyoungcode blog</title>
+  <title>{% if page.title %}{{page.title}} · {% endif %}jyoungcode blog{% if page.titleAfter %} · {{page.titleAfter}}{% endif %}</title>
+  <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+  <meta name="description" content="{{page.meta}}">
 </head>
 <body>
-	<header>
-		<h1>First of the uv</h1>
-		<nav>
-			<li><a href="{{site.baseurl}}/index.html">Home</a></li>
-			<li><a href="{{site.baseurl}}/news.html">News</a></li>
-		</nav>
-	</header>
+
+<header class="masthead {{page.mastheadClass}}">
+	<h1>First of the uv</h1>
+	{% include nav.html navclass='nav-top' %}
+</header>
+
 {{content}}
+
+<footer>
+	{% include nav.html navclass='nav-bottom' %}
+	<p>2016 powered by jekyll</p>
+</footer>
 
 </body >
 </html>

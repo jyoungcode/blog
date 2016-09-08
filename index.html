@@ -1,6 +1,30 @@
 ---
 layout: default
+titleAfter: Stellar astronomical objects from the universe.
+meta: discover many planets from the universe both inside and outside
+priority: 1.0
 ---
 
-	<h1>jyoungcode blog</h1>
-	<p>make a first blog</p>
+<h1>jyoungcode blog</h1>
+<p>make a first blog</p>
+
+<h2>Type of Planets</h2>
+
+<ol>
+	{% for planet in site.categories.planet-type %}
+		<li><a href="{{site.baseurl}}/planets/{{planet.folder}}/">{{planet.title}}</a>
+		{{planet.content}}
+		</li>
+	{% endfor %}
+</ol>
+
+<h2>Recently discovered planets</h2>
+
+<ul>
+	{% for news in site.categories.recently-discovered limit:2%}
+	<li>
+		<a href="">{{news.title}}</a>
+		<p>{{news.meta}}</p>
+	</li>
+	{% endfor %}
+</ul>

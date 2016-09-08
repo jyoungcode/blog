@@ -4,3 +4,4 @@ markdown: kramdown
 
 baseurl: /blog
 exclude: ['README.md']
+permalink: pretty
