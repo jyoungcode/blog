@@ -1,0 +1,32 @@
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+	// font: normal 100%/1.4 Georgia,serif;
+	font-size: 16px;
+	font-family: $font-family;
+}
+
+body {
+	color: #404040;
+	position: relative;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+
+main.home-content {
+	margin-top: 80px;
+}
+
+a {
+	text-decoration: none;
+}
