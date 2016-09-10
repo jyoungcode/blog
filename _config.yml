@@ -17,8 +17,8 @@ markdown: kramdown
 # theme: minima
 
 # encoding: utf-8
-# highlighter: rouge
+highlighter: rouge
 
 sass:
   sass_dir: _sass
-  style: expanded
+  style: compressed

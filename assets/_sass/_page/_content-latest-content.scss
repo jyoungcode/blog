@@ -2,6 +2,9 @@
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	@media (min-width: 1200px) {
+		max-width: 1200px;
+	}
 	@media (min-width: 600px) {
 		padding-left: 1rem;
 		padding-right: 1rem;
@@ -10,6 +13,10 @@
 
 .latest-articles {
 	text-align: center;
+	@media (min-width: 1200px) {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 .article-link, .time {
@@ -20,18 +27,27 @@
 	background: #f2f2f2;
 	transition: all 0.2s ease;
 	margin-bottom: 1rem;
+	@media (min-width: 1200px) {
+		flex: 1;
+	}
 }
+
 
 // .latest-articles, .article-inner {
 // 	border: 0;
 // }
 
+.article-link~.article-link {
+	margin-left: 1rem;
+}
+
 .article-link:hover {
-	box-shadow: 0 2px 5px 2px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 }
 
 .article-inner {
 	// transition: all 0.2s ease;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;

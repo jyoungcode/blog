@@ -1,30 +1,111 @@
 ---
 layout: default
-titleAfter: Front End Web Developer
-meta: interested in web development and design.
-priority: 1.0
 ---
+<main class="home-content">
 
-<h1>jyoungcode blog</h1>
-<p>make a first blog</p>
+	<!-- [start] banner -->
+	<section class="banner">
+		<div class="small-container">
+			<h1>JyoungCode</h1>
+			<h2>Front End Web Developer</h2>
+			<p class="opener">Stay hungry, Stay foolish</p>
+			<a href="https://www.facebook.com/yeongbae.ji.1" class="social-icon facebook">
+				<i class="fa fa-facebook-square" aria-hidden="true"></i>
+			</a>
+			<a href="https://github.com/jyoungcode" class="social-icon github">
+				<i class="fa fa-github" aria-hidden="true"></i>
+			</a>
+			<a href="https://codepen.io/jyoungcode" class="social-icon codepen">
+				<i class="fa fa-codepen" aria-hidden="true"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/yeongbae-ji-b96040125" class="social-icon linkedin">
+				<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+			</a>
+		</div>
+	</section><!-- [end] banner -->
 
-<h2>Type of Planets</h2>
+	<!-- [start] latest-content -->
+	<section class="latest-content">
+		<div class="large-container">
+			<div class="latest-articles">
+				{% for post in site.categories.myposts limit:3 %}
+				<a href="" class="article-link">
+					<article class="article-inner">
+						<div>
+							<h1>{{post.title}}</h1>
+							<time datetime="2016-09-08">{{post.date | date: '%B %-d, %Y'}}</time>
+							<p>{{post.excerpt}}</p>
+						</div>
+						<div class="article-image">
+							<img src="{{post.image}}" alt="">
+						</div>
+					</article>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section><!-- [end] latest-content -->
 
-<ol>
-	{% for planet in site.categories.planet-type %}
-		<li><a href="{{site.baseurl}}/planets/{{planet.folder}}/">{{planet.title}}</a>
-		{{planet.content}}
-		</li>
-	{% endfor %}
-</ol>
+	<!-- [start] category-content -->
+	<section class="category-content">
+		<div class="category-inner-wrap">
+			<!-- 1 row -->
+			<a href="" class="category-cell" id="html">
+				<img src="assets/img/box-img/html.png" alt="html logo" class="responsive-image">
+				<h3>HTML</h3>
+			</a>
+			<a href="" class="category-cell" id="css">
+				<img src="assets/img/box-img/css.png" alt="css logo" class="responsive-image">
+				<h3>CSS</h3>
+			</a>
+			<a href="" class="category-cell" id="bootstrap">
+				<img src="assets/img/box-img/bootstrap.png" alt="bootstrap logo" class="responsive-image">
+				<h3>Bootstrap</h3>
+			</a>
 
-<h2>Recently discovered planets</h2>
+			<!-- 2 row -->
+			<a href="" class="category-cell" id="js">
+				<img src="assets/img/box-img/js.png" alt="js logo" class="responsive-image">
+				<h3>JavaScript</h3>
+			</a>
+			<a href="" class="category-cell" id="jquery">
+				<img src="assets/img/box-img/jquery.png" alt="jquery logo" class="responsive-image">
+				<h3>jQuery</h3>
+			</a>
+			<a href="" class="category-cell" id="angularjs">
+				<img src="assets/img/box-img/angularjs.png" alt="angularjs logo" class="responsive-image">
+				<h3>AngularJS</h3>
+			</a>
 
-<ul>
-	{% for news in site.categories.recently-discovered limit:2%}
-	<li>
-		<a href="">{{news.title}}</a>
-		<p>{{news.meta}}</p>
-	</li>
-	{% endfor %}
-</ul>
+			<!-- 3 row -->
+			<a href="" class="category-cell" id="sass">
+				<img src="assets/img/box-img/sass.png" alt="sass logo" class="responsive-image">
+				<h3>Sass</h3>
+			</a>
+			<a href="" class="category-cell" id="nodejs">
+				<img src="assets/img/box-img/nodejs.png" alt="nodejs logo" class="responsive-image">
+				<h3>Node.js</h3>
+			</a>
+			<a href="" class="category-cell" id="jekyll">
+				<img src="assets/img/box-img/jekyll.png" alt="jekyll logo" class="responsive-image">
+				<h3>Jekyll</h3>
+			</a>
+
+			<!-- 4 row -->
+			<a href="" class="category-cell" id="git">
+				<img src="assets/img/box-img/git.png" alt="git logo" class="responsive-image">
+				<h3>Git</h3>
+			</a>
+			<a href="" class="category-cell" id="gulp">
+				<img src="assets/img/box-img/gulp.png" alt="gulp logo" class="responsive-image">
+				<h3>Gulp</h3>
+			</a>
+			<a href="" class="category-cell" id="grunt">
+				<img src="assets/img/box-img/grunt.png" alt="grunt logo" class="responsive-image">
+				<h3>Grunt</h3>
+			</a>
+
+		</div>
+	</section><!-- [end] category-content -->
+
+</main>
