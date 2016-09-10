@@ -1,19 +1,19 @@
 - title: Articles
-  url: /articles
+  url: articles
   class: nav_item_2
 
 - title: About
-  url: /about
+  url: about
   class: nav_item_3
 
 - title: Portfolio
-  url: /portfolio
+  url: portfolio
   class: nav_item_4
 
 - title: Projects
-  url: /projects
+  url: projects
   class: nav_item_5
 
 - title: Contact
-  url: /contact
+  url: contact
   class: nav_item_6
