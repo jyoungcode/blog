@@ -12,7 +12,6 @@
 }
 
 .latest-articles {
-	text-align: center;
 	@media (min-width: 1200px) {
 		display: flex;
 		flex-direction: row;
@@ -23,19 +22,18 @@
 	display: block;
 }
 
-.latest-articles .article-link {
-	background: #f2f2f2;
-	transition: all 0.2s ease;
-	margin-bottom: 1rem;
+.latest-articles a.article-link {
 	@media (min-width: 1200px) {
+		-webkit-flex: 1;
 		flex: 1;
 	}
 }
 
-
-// .latest-articles, .article-inner {
-// 	border: 0;
-// }
+.latest-articles a.article-link {
+	background: #f2f2f2;
+	transition: all 0.2s ease;
+	margin-bottom: 1rem;
+}
 
 .article-link~.article-link {
 	margin-left: 1rem;
@@ -43,6 +41,12 @@
 
 .article-link:hover {
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+}
+
+.latest-articles a .article-inner {
+	@media (min-width: 1200px) {
+		border: 0;
+	}
 }
 
 .article-inner {
@@ -54,9 +58,14 @@
 	justify-content: space-around;
 	color: #404040;
 	transition: all 0.2s ease;
+	padding: 0.5rem;
+	border-bottom: 1px solid #e2e2e2;
 	@media (min-width: 600px) {
 		padding: 2.5rem 2rem;
 	}
+}
+.article-inner:hover {
+	background: #f2f2f2;
 }
 
 .article-inner h1 {
@@ -85,5 +94,32 @@
 		width: 150px;
 		height: 150px;
 		max-width: 150px;
+	}
+}
+
+.post-btn {
+	padding: 0 1rem;
+	@media (min-width: 600px) {
+		padding-top: 20px;
+	}
+}
+
+.page-left {
+	padding: 5px;
+	margin: 0 auto;
+	text-align: center;
+	@media (min-width: 600px) {
+		float: left;
+
+	}
+}
+
+.page-right {
+	padding: 5px;
+	margin: 0 auto;
+	text-align: center;
+	@media (min-width: 600px) {
+		float: right;
+
 	}
 }

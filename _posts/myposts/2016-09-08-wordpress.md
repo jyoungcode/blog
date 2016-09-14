@@ -1,9 +1,10 @@
 ---
-layout: myposts
+layout: articles
 title: wordpress 테마
 meta: wordpress
+permalink: /articles/:title
 source: https://jyoungcode.github.io/blog/articles/content1
-image: assets/img/content-img/wordpress.png
+image: ../assets/img/content-img/wordpress.png
 category: myposts
 ---
 

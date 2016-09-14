@@ -4,9 +4,14 @@
 
 @import "_page/_nav.scss";
 @import "_page/_header.scss";
+@import "_page/_button.scss";
+@import "_page/_about.scss";
 
 // content
 @import "_page/_content-banner.scss";
 @import "_page/_content-latest-content.scss";
 @import "_page/_content-category.scss";
 @import "_page/_content-middle-btn.scss";
+
+// animation
+@import "_animation.scss";
