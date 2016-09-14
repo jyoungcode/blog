@@ -7,7 +7,7 @@
 title: JyoungCode's Blog
 email: jyoungcode@gmail.com
 
-baseurl: ""
+baseurl: "/blog"
 url: "https://jyoungcode.github.io/blog"
 exclude: ['README.md']
 permalink: pretty
